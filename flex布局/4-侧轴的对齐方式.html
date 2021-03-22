@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+            width: 600px;
+            height: 600px;
+            border: 1px solid #000;
+            margin: 100px auto;
+            display: flex;
+            /*
+
+             */
+            flex-direction: row;
+            justify-content: flex-start;
+            /*和侧轴起点对齐*/
+            /*align-items: flex-start;*/
+            /*align-items: flex-end;*/
+            /*
+            侧重没有两端对齐和环绕对齐
+             */
+            /*
+            baseline 所有item的基线在一条直线上
+            */
+            /*
+            stretch  拉伸对齐
+            所有item的高度变成侧轴的高度
+            但是每个item不能设置高度 否则无效
+            */
+            align-items: stretch;
+        }
+        ul>li {
+            width: 100px;
+            /*height: 100px;*/
+            line-height: 100px;
+            text-align: center;
+            font-size: 30px;
+            background: red;
+        }
+        ul>li:nth-child(2) {
+            padding-top: 100px;
+            background: green;
+        }
+        ul>li:nth-child(3) {
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+<!--
+主轴
+侧轴
+-->
+<ul>
+    <li>yz</li>
+    <li>xt</li>
+    <li>op</li>
+</ul>
+</body>
+</html>

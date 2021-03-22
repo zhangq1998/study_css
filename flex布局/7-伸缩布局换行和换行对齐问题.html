@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+            width: 600px;
+            height: 600px;
+            border: 1px solid #000;
+            margin: 100px auto;
+            display: flex;
+            /*
+            默认情况下,如果容器的一行放不下所有item,那么会等比压缩所有的item,保证在一行的显示
+            flex-wrap: 控制换行问题
+            默认取值: nowrap 换行
+            wrap: 放不下换行
+            wrap-reverse: 以行为单位进行反转
+             */
+            flex-wrap: wrap;
+            /*
+            align-content
+            设置换行之后的对齐方式
+            注意点: 只有伸缩项发生了换行这个属性才有效
+            flex-start: 换行之后和侧轴起点对齐,一行接着一行
+            flex-end: 换行之后和侧轴终点对齐
+            center: 换行之后和侧轴中点对齐
+            space-between: 两端对齐
+            space-around: 环绕对齐
+            stretch: 一行为单位进行拉伸
+             */
+            /*align-content: flex-end;*/
+            /*align-content: center;*/
+            /*align-content: space-between;*/
+            align-content: stretch;
+        }
+        ul>li {
+            width: 300px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 30px;
+            background: red;
+        }
+        ul>li:nth-child(2) {
+            background: green;
+        }
+        ul>li:nth-child(3) {
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+<!--
+主轴
+侧轴
+-->
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+</body>
+</html>

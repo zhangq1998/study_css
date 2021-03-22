@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+            width: 600px;
+            height: 600px;
+            border: 1px solid #000;
+            margin: 100px auto;
+            display: flex;
+            flex-direction: column;
+        }
+        ul>li {
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 30px;
+            background: red;
+        }
+        ul>li:nth-child(1) {
+            /*
+            1. 如果没有指定flex-grow的值或者值为0,则当前item不扩充
+            2. 如果flex-shrink的值为0,则当前item不会被缩小
+            3. 如果主轴变成垂直方向,扩充和缩小的是item的高度
+             */
+            flex-grow: 0;
+            /*flex-shrink: 0;*/
+        }
+        ul>li:nth-child(2) {
+            flex-grow: 4;
+            background: green;
+            /*flex-shrink: 4;*/
+        }
+        ul>li:nth-child(3) {
+            flex-grow: 8;
+            background: blue;
+            /*flex-shrink: 8;*/
+        }
+    </style>
+</head>
+<body>
+<!--
+主轴
+侧轴
+-->
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+</body>
+</html>

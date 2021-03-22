@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+            width: 600px;
+            height: 600px;
+            border: 1px solid #000;
+            margin: 100px auto;
+            display: flex;
+        }
+        ul>li {
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 30px;
+            background: red;
+        }
+        ul>li:nth-child(1) {
+            /*
+            扩充 缩小 宽度
+            flex默认值
+            0 1 auto
+
+            */
+            flex: 1 1 auto;
+        }
+        ul>li:nth-child(2) {
+            flex: 4 1 auto;
+            background: green;
+        }
+        ul>li:nth-child(3) {
+            flex: 8 1 auto;
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+<!--
+主轴
+侧轴
+-->
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+</body>
+</html>

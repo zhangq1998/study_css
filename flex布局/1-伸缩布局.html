@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+            width: 600px;
+            border: 1px solid #000;
+            margin: 100px auto;
+            display: flex;
+            /*overflow: hidden;*/
+        }
+        ul>li {
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 30px;
+            background: red;
+            /*display: inline-block;*/
+            /*float: left;*/
+        }
+        ul>li:nth-child(2) {
+            background: green;
+        }
+        ul>li:nth-child(3) {
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+<!--
+主轴
+侧轴
+-->
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+</body>
+</html>

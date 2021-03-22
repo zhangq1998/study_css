@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+<script>
+/*
+    PC:
+    Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36
+    苹果:
+    Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1
+    安卓移动端:
+    Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Mobile Safari/537.36
+ */
+
+// let userAgentInfo = navigator.userAgent
+// console.log(userAgentInfo);
+
+function isPc () {
+    let userAgentInfo = navigator.userAgent
+    if (/iphone/i.test(userAgentInfo)) {
+        return false;
+    } else if (/android/i.test(userAgentInfo)) {
+        return false;
+    }
+    return true;
+}
+
+if (!isPc()) {
+    location.href = "http://m.jd.com";
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+            width: 600px;
+            border: 1px solid #000;
+            margin: 100px auto;
+            display: flex;
+            /*
+            在伸缩布局中，默认情况下水平方向是主轴，且主轴的起点在伸缩容器的左边，默认情况下所有伸缩项都是从主轴的起点开始排版的
+            可以通过属性来修改主轴的起点和位置
+            flex-direction: 用来修改主轴起点的位置
+            row: 起点在伸缩容器的最左边，终点在伸缩容器的右边，从左至右的排版，默认的取值
+            row-reverse: 起点在伸缩容器的最右边，终点在伸缩容器的左边
+            column: 起点在伸缩容器的最顶部，终点在伸缩容器的最底部,从上至下
+            column-reverse: 起点在伸缩容器的最底部，终点在伸缩容器的最顶部,从下至上
+            主轴和侧轴永远垂直
+             */
+            /*flex-direction: row;*/
+            /*flex-direction: row-reverse;*/
+            /*flex-direction: column;*/
+            flex-direction: column-reverse;
+        }
+        ul>li {
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 30px;
+            background: red;
+        }
+        ul>li:nth-child(2) {
+            background: green;
+        }
+        ul>li:nth-child(3) {
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+<!--
+主轴
+侧轴
+-->
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+</body>
+</html>
